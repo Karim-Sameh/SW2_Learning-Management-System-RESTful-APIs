@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "75bf76bc-a223-4dfa-b6c3-d30c064f56c8",
+		"name": "Lost Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24092482",
+		"_collection_link": "https://galactic-firefly-954371.postman.co/workspace/Team-Workspace~c806bfb5-7b7c-4429-83de-4a9ab20fc03e/collection/24092482-75bf76bc-a223-4dfa-b6c3-d30c064f56c8?action=share&creator=24092482&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"IT\"  ,  \r\n    \"code\":\"IT Code\"  , \r\n    \"status\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/courses/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"courses",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/courses/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"courses",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"2\"  , \r\n    \"name\":\"CS\"  ,  \r\n    \"code\":\"test update\"  , \r\n    \"status\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/courses/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"courses",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/courses/deleteById/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"courses",
+								"deleteById",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instructor",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Mohamed Suliman Suliman Saued\" ,\r\n    \"email\":\"mohamed@gmail.com\" ,\r\n    \"password\":\"mohamed\" ,\r\n    \"phone\":\"+201213784543434\" \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/instructors/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/instructors/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\" , \r\n    \"name\":\"Moaaz Suliman Saued\" ,\r\n    \"email\":\"moaaz@gmail.com\" ,\r\n    \"password\":\"z\" ,\r\n    \"phone\":\"+201213784543434\"  , \r\n    \"status\":true\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/instructors/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/instructors/deleteById/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"deleteById",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInstructorCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/instructors/getCoursesForInstructor/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"getCoursesForInstructor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putDegreeForStudent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/instructors/putDegreeForStudent/student/1/course/1/degree/50",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"instructors",
+								"putDegreeForStudent",
+								"student",
+								"1",
+								"course",
+								"1",
+								"degree",
+								"50"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "assignCourseToInstrucor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/admins/assignTo/52/course/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"admins",
+								"assignTo",
+								"52",
+								"course",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Student2\" ,\r\n    \"email\":\"student2@gmail.com\" ,\r\n    \"password\":\"student2\" ,\r\n    \"phone\":\"+2012137845\"  ,\r\n    \"status\":true\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/students/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"students",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCoursesForStudentByStudentId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/StudentsAndCourses/getAllCourseForStudentByStudentId/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"StudentsAndCourses",
+								"getAllCourseForStudentByStudentId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteStudentById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/students/deleteById/52",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"students",
+								"deleteById",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerStudentTOCourse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/StudentsAndCourses/registerInCourse/2/course/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"StudentsAndCourses",
+								"registerInCourse",
+								"2",
+								"course",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "moaaz@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8081/learningManagement/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"learningManagement",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
